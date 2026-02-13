@@ -1,0 +1,26 @@
+<!-- #ETIQUETAS QUE REUTILIZA EL CÓDIGO 
+ 
+En Flask nos podemos ahorrar lineas de código optimizando lo con macro
+
+Crearemos un maro 
+-->
+{%macro datos(name,placeholder,type="text")%}
+    <div class="mb-3">
+            <label class="form-check-label">{{name}}</label>
+            <input for="{{name}}" class="form-control" type="{{type}}" id="{{name}}" name="{{name}}"
+            placeholder="{{placeholder}}">
+    </div>
+{%endmacro%}
+
+{%macro campoNuevo(field)%}
+    <td>{{field.label}}</td>
+    <dd>{{field(**kwargs) | safe}}</dd> 
+    <!-- #Siempre va estar para pintar el campo en el html -->
+    {%if field.errors%}
+        {%for error in field.errors %}
+            <li style="color:red">{{error}}</li>
+        {%endfor%}
+    {%endif%}
+
+{%endmacro%}
+
