@@ -1,10 +1,10 @@
-from slqalchemy import create_engine
+from sqlalchemy import create_engine
 
 class Config(object):
     SECRET_KEY="ClaveSecreta"
     SESSION_COOKIE_SECURE=False
 
-Class DevelopmentConfig(Config):
+class DevelopmentConfig(Config):
     DEBUG = True
-    SQLACHEMY_DATABASE_URI='mysql+pymysql://josuearmandoriverahernandez:root@127.0.0.1/bdigs803'
-    SQLACHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Potrerodelasierra118@127.0.0.1:3306/bdidgs803'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
