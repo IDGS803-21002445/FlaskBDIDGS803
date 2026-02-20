@@ -36,16 +36,31 @@
             </tr>
         </thead>
         <tbody>
+            {%for alum in alumno%}
             <tr class="bg-neutral-primary-soft border-b  border-default">
                 <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
-                    Apple MacBook Pro 17"
+                {{alum.nombre}}
                 </th>
                 <td class="px-6 py-4">
-                    Silver
+                    {{alum.apaterno}}
                 </td>
                 <td class="px-6 py-4">
-                    Laptop
+                    {{alum.email}}
                 </td>
+                <td class="px-6 py-4">
+                    <a href="modificar?id={{alum.id}}" class="flex items-center">
+                    </a>
+                </td>
+
+                <td class="px-6 py-4">
+                    <a href="detalles?id={{alum.id}}" class="flex items-center">
+                    </a>
+                </td>
+               <td class="px-6 py-4">
+                    <a href="detalles?id={{alum.id}}" class="flex items-center">
+                    </a>
+                </td>
+    
                 <td class="px-6 py-4">
                     <button type="button" class="text-white bg-warning box-border border border-transparent hover:bg-warning-strong focus:ring-4 focus:ring-warning-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Editar</button>
                 </td>
@@ -54,47 +69,15 @@
               
                 </td>
             </tr>
-             <tr class="bg-neutral-primary-soft border-b  border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-warning box-border border border-transparent hover:bg-warning-strong focus:ring-4 focus:ring-warning-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Editar</button>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Eliminar</button>
-              
-                </td>
-            </tr>
-             <tr class="bg-neutral-primary-soft border-b  border-default">
-                <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-warning box-border border border-transparent hover:bg-warning-strong focus:ring-4 focus:ring-warning-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Editar</button>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Eliminar</button>
-              
-                </td>
-            </tr>
+             {%endfor%}
         </tbody>
     </table>
+</div>
+<div class="grid md:grid-cols-2 md:gap-6">
+    <input type="submit" id="btn1" name="btn1" value="Registrar">
+  <a href="index" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Nuevo</a>
+svg
+
 </div>
 
 
