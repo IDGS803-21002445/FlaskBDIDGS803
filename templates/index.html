@@ -19,10 +19,13 @@
                     Nombre
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
-                    Apaterno
+                    Apellidos
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Correo
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Teléfono
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Editar
@@ -47,27 +50,35 @@
                 <td class="px-6 py-4">
                     {{alum.email}}
                 </td>
-                <td class="px-6 py-4">
-                    <a href="modificar?id={{alum.id}}" class="flex items-center">
-                    </a>
-                </td>
-
-                <td class="px-6 py-4">
-                    <a href="detalles?id={{alum.id}}" class="flex items-center">
-                    </a>
-                </td>
                <td class="px-6 py-4">
-                    <a href="detalles?id={{alum.id}}" class="flex items-center">
-                    </a>
-                </td>
-    
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-warning box-border border border-transparent hover:bg-warning-strong focus:ring-4 focus:ring-warning-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Editar</button>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-danger box-border border border-transparent hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium shadow-xs font-medium leading-5 rounded-full text-sm px-4 py-2.5 focus:outline-none">Eliminar</button>
-              
-                </td>
+    <a href="modificar?id={{alum.id}}" 
+       class="text-white bg-warning box-border border border-transparent 
+              hover:bg-warning-strong focus:ring-4 focus:ring-warning-medium 
+              shadow-xs font-medium leading-5 rounded-full text-sm 
+              px-4 py-2.5 focus:outline-none inline-block text-center">
+        Modificar
+                </a>
+            </td>
+
+            <td class="px-6 py-4">
+                <a href="detalles?id={{alum.id}}" 
+                class="text-white bg-primary box-border border border-transparent 
+                        hover:bg-primary-strong focus:ring-4 focus:ring-primary-medium 
+                        shadow-xs font-medium leading-5 rounded-full text-sm 
+                        px-4 py-2.5 focus:outline-none inline-block text-center">
+                    Detalles
+                </a>
+            </td>
+
+            <td class="px-6 py-4">
+                <a href="eliminar?id={{alum.id}}" 
+                class="text-white bg-danger box-border border border-transparent 
+                        hover:bg-danger-strong focus:ring-4 focus:ring-danger-medium 
+                        shadow-xs font-medium leading-5 rounded-full text-sm 
+                        px-4 py-2.5 focus:outline-none inline-block text-center">
+                    Eliminar
+                </a>
+            </td>
             </tr>
              {%endfor%}
         </tbody>

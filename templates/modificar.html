@@ -8,7 +8,9 @@
     {{form.csrf_token}}
     
     <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
-  
+    <div class="relativ z-0 w-full mb-5 group">
+      {{macros.camposNuevos(form.id, class="block py-2.5 px-30 w-full text-sm text-gray-900 bg-transparent border-0")}}
+    </div>  
     <div class="relativ z-0 w-full mb-5 group">
       {{macros.camposNuevos(form.nombre, class="block py-2.5 px-30 w-full text-sm text-gray-900 bg-transparent border-0")}}
     </div>
